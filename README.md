@@ -1,9 +1,8 @@
-https://lanmaowz.com/a-complete-guide-to-yargs/
 ## 基于nodejs 的命令行diy脚本
 
 参考：
-[Node.js 命令行程序开发教程 --阮一峰](http://www.ruanyifeng.com/blog/2015/05/command-line-with-node.html)
-[从零开始打造个人专属命令行工具集——yargs完全指南 --蓝猫](https://lanmaowz.com/a-complete-guide-to-yargs/)
+- [Node.js 命令行程序开发教程 --阮一峰](http://www.ruanyifeng.com/blog/2015/05/command-line-with-node.html)
+- [从零开始打造个人专属命令行工具集——yargs完全指南 --蓝猫](https://lanmaowz.com/a-complete-guide-to-yargs/)
 
 ##基本介绍
 
@@ -18,13 +17,14 @@ https://lanmaowz.com/a-complete-guide-to-yargs/
 * [x] mongo
 * [ ] proxy
 
-命令行的proxy发现无效，留待之后解决，创建基于 docker 的数据库的临时连接是，报出the input device is not a TTY 留待解决。
+命令行的proxy发现无效，留待之后解决，创建基于 docker 的数据库的临时连接时，报出the input device is not a TTY 留待解决。
 
 Oh My Zsh 的插件功能应该也能实现同样的功能 暂时使用 alias 实现 proxy 发现方便的不行
-
-`# proxy
+```
+# proxy
 alias proxy='export http_proxy=http://127.0.0.1:1087 https_proxy=http://127.0.0.1:1087'  
-alias disproxy='unset http_proxy https_proxy'`
+alias disproxy='unset http_proxy https_proxy'
+```
 
 ## 使用方法
 在当前文件夹下运行 `npm link`
