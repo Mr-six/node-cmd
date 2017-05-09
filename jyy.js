@@ -10,12 +10,24 @@
 */
 
 const argv = require('yargs')
+const logo = `
+ $$$$$$\\  $$$$$$$\\  $$$$$$$$\\       $$\\     $$\\  $$$$$$\\  $$\\   $$\\        $$$$$$\\  $$\\   $$\\
+ $$  __$$\\ $$  __$$\\ $$  ____|       \\$$\\   $$  |$$  __$$\\ $$ |  $$ |      $$  __$$\\ $$ | $$  |
+ $$ /  $$ |$$ |  $$ |$$ |             \\$$\\ $$  / $$ /  $$ |$$ |  $$ |      $$ /  $$ |$$ |$$  /
+ $$$$$$$$ |$$$$$$$  |$$$$$\\            \\$$$$  /  $$ |  $$ |$$ |  $$ |      $$ |  $$ |$$$$$  /
+ $$  __$$ |$$  __$$< $$  __|            \\$$  /   $$ |  $$ |$$ |  $$ |      $$ |  $$ |$$  $$<
+ $$ |  $$ |$$ |  $$ |$$ |                $$ |    $$ |  $$ |$$ |  $$ |      $$ |  $$ |$$ |\\$$\\
+ $$ |  $$ |$$ |  $$ |$$$$$$$$\\           $$ |     $$$$$$  |\\$$$$$$  |       $$$$$$  |$$ | \\$$\\
+ \\__|  \\__|\\__|  \\__|\\________|          \\__|     \\______/  \\______/        \\______/ \\__|  \\__|
 
-const ngrok = require('./my_modules/ngrok')   // 内网穿透模块
-const aria2 = require('./my_modules/aria2') // aria2c模块
-const mysql = require('./my_modules/mysql') // mysql模块
-const redis = require('./my_modules/redis') // redis模块
-const mongo = require('./my_modules/mongo') // mongo模块
+  使用 -h 查看可以使用命令
+`
+
+// const ngrok = require('./my_modules/ngrok')   // 内网穿透模块
+// const aria2 = require('./my_modules/aria2') // aria2c模块
+// const mysql = require('./my_modules/mysql') // mysql模块
+// const redis = require('./my_modules/redis') // redis模块
+// const mongo = require('./my_modules/mongo') // mongo模块
 
 argv
   // .command(ngrok)
@@ -29,6 +41,11 @@ argv
   // .command(mongo)
 
   .commandDir('my_modules')   //统一导入文件夹下的命令
+
+  // 默认命令
+  .command('*', 'the default command', () => {}, (argv) => {
+    console.log(logo)
+  })
 
   .usage('Usage: jyy [options] [options] [arguments]')
   .example('jyy agrok -s vue -p 8080', '——> ngrok 使用‘vue’子域名 本地端口‘8080’')

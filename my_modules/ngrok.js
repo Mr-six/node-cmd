@@ -2,7 +2,7 @@ const shell = require('shelljs')
 
 // ngrok 目录
 const ngrok_my_path = '/Users/miaojiang/web/ngrok/my' // vultr 日本 暂无
-const ngrok_test_path = '/Users/miaojiang/web/ngrok/test' // 搬瓦工 洛杉矶
+const ngrok_test_path = '/Users/miaojiang/web/ngrok/my' // 搬瓦工 洛杉矶
 const sunny_path = '/Users/miaojiang/web/ngrok/sunny' // sunny 第三方个人服务 香港服务器 
 const sunny_id = 'b2c5454ee361a1e8'   //对应端口为3000 的隧道id
 const sunny_com = './sunny clientid ' + sunny_id
