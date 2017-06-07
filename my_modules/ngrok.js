@@ -25,7 +25,7 @@ module.exports = {
         default: 3000,
         type: 'number'
       })
-      .usage('Usage: jyy agrok [options] [arguments]')
+      .usage('Usage: jyy ngrok [options] [arguments]')
       .example('jyy agrok -s vue -p 8080', '——> ngrok 使用‘vue’子域名 本地端口‘8080’ \n \
         默认使用sunny 暴露本3000 端口')
       .help("h")
