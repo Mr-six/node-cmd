@@ -2,11 +2,11 @@ const shell = require('shelljs')
 
 /**
  * aria2 启动命令
- * aria2 配置文件为 /Users/miaojiang/aria2.cof
- * 启动方式为 aria2c --conf-path='/Users/miaojiang/aria2.cof' -D
+ * aria2 配置文件为 /Users/jyy/aria2.cof
+ * 启动方式为 aria2c --conf-path='/Users/jyy/aria2.cof' -D
  * 关闭使用 kill aria2c 按tab 结束掉 进程pid
  */
-const aria2_cmd = "aria2c --conf-path='/Users/miaojiang/aria2.cof' -D"
+const aria2_cmd = "aria2c --conf-path='/Users/jyy/aria2.cof' -D"
 module.exports = {
   cmd: 'aria2',
   desc: '下载工具 aria2 服务启动',
