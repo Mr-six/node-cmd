@@ -1,10 +1,10 @@
 const shell = require('shelljs')
 
 // ngrok 目录
-const ngrok_my_path = '/Users/miaojiang/web/ngrok/my' // vultr 日本 暂无
-const ngrok_test_path = '/Users/miaojiang/web/ngrok/my' // 搬瓦工 洛杉矶
-const sunny_path = '/Users/miaojiang/web/ngrok/sunny' // sunny 第三方个人服务 香港服务器 
-const sunny_id = 'b2c5454ee361a1e8'   //对应端口为3000 的隧道id
+const ngrok_my_path = '/Users/jyy/web/ngrok/my' // vultr 日本 暂无
+const ngrok_test_path = '/Users/jyy/web/ngrok/my' // 搬瓦工 洛杉矶
+const sunny_path = '/Users/jyy/web/ngrok/sunny' // sunny 第三方个人服务 香港服务器 
+const sunny_id = '6857432e29f4a64e'   //对应端口为3000 的隧道id
 const sunny_com = './sunny clientid ' + sunny_id
 const ngrok_cmd = './ngrok -config=./ngrok.yml -subdomain='   // 配置文件
 
@@ -26,7 +26,7 @@ module.exports = {
         type: 'number'
       })
       .usage('Usage: jyy ngrok [options] [arguments]')
-      .example('jyy agrok -s vue -p 8080', '——> ngrok 使用‘vue’子域名 本地端口‘8080’ \n \
+      .example('jyy ngrok -s vue -p 8080', '——> ngrok 使用‘vue’子域名 本地端口‘8080’ \n \
         默认使用sunny 暴露本3000 端口')
       .help("h")
       .alias("h", "help")

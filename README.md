@@ -4,6 +4,16 @@
 - [Node.js 命令行程序开发教程 --阮一峰](http://www.ruanyifeng.com/blog/2015/05/command-line-with-node.html)
 - [从零开始打造个人专属命令行工具集——yargs完全指南 --蓝猫](https://lanmaowz.com/a-complete-guide-to-yargs/)
 
+##依赖
+nodejs 6.4+
+shelljs 0.7.7
+yargs 7.02
+docker
+
+## 使用方法
+- 克隆到本地`git clone https://github.com/Mr-six/node-cmd.git`
+- 进入文件夹下 `npm link`
+
 ##基本介绍
 
 由于使用的几款软件启动时命令过长不容易记住，还有些要包含配置文件，以及配置参数每次启动都比较麻烦，索性就当练习这自己写了一个
